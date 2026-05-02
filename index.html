@@ -7,6 +7,36 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+<script>
+const username = "_kumonail"; // IG帳號
+
+fetch(`https://www.instagram.com/${username}/?__a=1&__d=dis`)
+  .then(res => res.json())
+  .then(data => {
+    const posts = data.graphql.user.edge_owner_to_timeline_media.edges;
+    const gallery = document.querySelector(".gallery");
+
+    gallery.innerHTML = "";
+
+    posts.slice(0, 9).forEach(post => {
+      const img = post.node.thumbnail_src;
+
+      const div = document.createElement("div");
+      div.className = "card";
+
+      div.innerHTML = `
+        <img src="${img}" />
+      `;
+
+      gallery.appendChild(div);
+    });
+  })
+  .catch(() => {
+    document.querySelector(".gallery").innerHTML = "無法載入 IG，請稍後再試";
+  });
+</script>
+
+    
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       background: #f8f8f8;
