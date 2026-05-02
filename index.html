@@ -2,39 +2,99 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>Kumo Nail Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumo Nail | 個人作品集</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #fafafa;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8f8f8;
+      color: #333;
     }
+
     header {
-      background: #000;
+      background: linear-gradient(135deg, #111, #333);
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
     }
-    .container {
-      padding: 20px;
+
+    header h1 {
+      font-size: 40px;
+      letter-spacing: 2px;
     }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      border-left: 5px solid #e91e63;
+      padding-left: 10px;
+    }
+
+    .about {
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .gallery img {
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
       width: 100%;
-      border-radius: 10px;
+      display: block;
     }
+
+    .card p {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 15px;
+      padding: 12px 20px;
       background: #e91e63;
       color: white;
+      border-radius: 25px;
       text-decoration: none;
-      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      opacity: 0.6;
     }
   </style>
 </head>
@@ -42,23 +102,55 @@
 
 <header>
   <h1>Kumo Nail</h1>
-  <p>美甲作品展示</p>
+  <p>美甲設計 · 個人作品集</p>
 </header>
 
 <div class="container">
-  <h2>作品集</h2>
 
-  <div class="gallery">
-    <!-- 這裡放圖片 -->
-    <img src="https://via.placeholder.com/300" />
-    <img src="https://via.placeholder.com/300" />
-    <img src="https://via.placeholder.com/300" />
-  </div>
+  <section class="about">
+    <h2>關於我</h2>
+    <p>
+      專注於韓系、簡約與質感設計，打造適合每位客人的專屬美甲風格。
+      喜歡乾淨細緻的線條與柔和配色，讓日常也能擁有精緻儀式感。
+    </p>
+  </section>
 
-  <a class="btn" href="https://www.instagram.com/_kumonail" target="_blank">
-    前往 Instagram
-  </a>
+  <section>
+    <h2>作品集</h2>
+    <div class="gallery">
+
+      <!-- 換成你的IG圖片 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/400" alt="作品">
+        <p>韓系簡約設計</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400" alt="作品">
+        <p>氣質裸色系列</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400" alt="作品">
+        <p>暈染設計</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>預約 / 聯絡</h2>
+    <p>歡迎透過 Instagram 私訊預約</p>
+    <a class="btn" href="https://www.instagram.com/_kumonail" target="_blank">
+      前往 IG
+    </a>
+  </section>
+
 </div>
+
+<footer>
+  © 2026 Kumo Nail
+</footer>
 
 </body>
 </html>
