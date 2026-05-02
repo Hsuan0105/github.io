@@ -1,11 +1,126 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>我的網站</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nail Artist | 美甲設計師</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #fafafa;
+    color: #333;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.bio {
+    color: gray;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #ffb6c1;
+    color: white;
+    text-decoration: none;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* Section */
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+</style>
 </head>
+
 <body>
-  <h1>歡迎來到我的網站</h1>
-  <p>這是我的第一個網頁！</p>
+
+<!-- 個人介紹 -->
+<div class="header">
+    <img src="https://via.placeholder.com/120" class="profile-img">
+    <div class="name">你的名字 Nail Studio</div>
+    <div class="bio">✨ 韓系｜日系｜客製設計 ✨</div>
+    <div class="bio">📍 高雄 / 預約制</div>
+
+    <a href="#" class="btn">預約服務</a>
+    <a href="#" class="btn">Instagram</a>
+</div>
+
+<!-- 作品集 -->
+<div class="gallery">
+    <img src="https://picsum.photos/300?1">
+    <img src="https://picsum.photos/300?2">
+    <img src="https://picsum.photos/300?3">
+    <img src="https://picsum.photos/300?4">
+    <img src="https://picsum.photos/300?5">
+    <img src="https://picsum.photos/300?6">
+</div>
+
+<!-- 服務項目 -->
+<div class="section">
+    <h2>服務項目</h2>
+    <p>手部凝膠 / 足部凝膠 / 延甲 / 客製設計</p>
+</div>
+
+<!-- 價目表 -->
+<div class="section">
+    <h2>價格參考</h2>
+    <p>基礎凝膠：$800 起</p>
+    <p>客製設計：$1200 起</p>
+</div>
+
+<!-- 聯絡 -->
+<div class="section">
+    <h2>聯絡方式</h2>
+    <p>Line：@yourline</p>
+    <p>IG：@your_ig</p>
+</div>
+
+<div class="footer">
+    © 2026 Nail Studio
+</div>
+
 </body>
 </html>
